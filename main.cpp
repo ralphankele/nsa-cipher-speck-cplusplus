@@ -21,7 +21,8 @@ int main(int argc, char** argv){
     
     if(test_vectors() != 0)
         printf("Encryption failed!\n");
-    printf("Encryption ok!\n");
+    else
+        printf("Encryption ok!\n");
 
     
     return 0;

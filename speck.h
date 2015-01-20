@@ -22,7 +22,7 @@
 
 //Definitions
 //16 (4), 24 (3,4), 32 (3,4), 48 (2,3), 64 (2,3,4)
-#define WORD_SIZE 16
+#define WORD_SIZE 64
 #define KEY_WORDS 4
 
 #if (WORD_SIZE == 64)
@@ -32,36 +32,36 @@
 #endif
 
 #if (WORD_SIZE == 16)
-    #define ROUNDS (32)
-    #define CONST_ALPHA (2)
-    #define CONST_BETHA (7) 
+    #define ROUNDS (22)
+    #define CONST_ALPHA (7)
+    #define CONST_BETHA (2)
 #elif (WORD_SIZE == 24)
-    #define CONST_ALPHA (3)
-    #define CONST_BETHA (8)
+    #define CONST_ALPHA (8)
+    #define CONST_BETHA (3)
     #if (KEY_WORDS == 3)
         #define ROUNDS (22)
     #elif (KEY_WORDS == 4)
         #define ROUNDS (23)
     #endif
 #elif (WORD_SIZE == 32)
-    #define CONST_ALPHA (3)
-    #define CONST_BETHA (8)
+    #define CONST_ALPHA (8)
+    #define CONST_BETHA (3)
     #if (KEY_WORDS == 3)
         #define ROUNDS (26)
     #elif (KEY_WORDS == 4)
         #define ROUNDS (27)
     #endif
 #elif (WORD_SIZE == 48)
-    #define CONST_ALPHA (3)
-    #define CONST_BETHA (8)
+    #define CONST_ALPHA (8)
+    #define CONST_BETHA (3)
     #if (KEY_WORDS == 2)
         #define ROUNDS (28)
     #elif (KEY_WORDS == 3)
         #define ROUNDS (29)
     #endif
 #elif (WORD_SIZE == 64)
-    #define CONST_ALPHA (3)
-    #define CONST_BETHA (8)
+    #define CONST_ALPHA (8)
+    #define CONST_BETHA (3)
     #if (KEY_WORDS == 2)
         #define ROUNDS (32)
     #elif (KEY_WORDS == 3)
